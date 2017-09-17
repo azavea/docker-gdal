@@ -1,0 +1,15 @@
+language: bash
+services: docker
+
+env:
+  - GDAL_VERSION=2.2.1 VARIANT=slim
+
+script:
+  - ./scripts/cibuild
+
+deploy:
+  - provider: script
+    script: "scripts/cipublish"
+    on:
+      repo: azavea/docker-gdal
+      branch: master
