@@ -2,7 +2,7 @@ language: bash
 services: docker
 
 env:
-  - GDAL_VERSION=2.2.1 VARIANT=slim
+  - GDAL_VERSION=2.2.4 VARIANT=slim
 
 script:
   - ./scripts/cibuild
